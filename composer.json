@@ -40,7 +40,7 @@
         "php-http/httplug-bundle": "For integration with Symfony"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.17",
+        "friendsofphp/php-cs-fixer": "^2.17 || ^3.0",
         "infection/infection": "^0.21.5 || ^0.24.0",
         "php-parallel-lint/php-parallel-lint": "^1.2",
         "phpstan/phpstan": "^0.12.58",
