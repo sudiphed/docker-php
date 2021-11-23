@@ -47,7 +47,7 @@ class Docker extends Client
     /**
      * {@inheritdoc}
      */
-    public function execStart(string $id, ExecIdStartPostBody $execStartConfig, string $fetch = self::FETCH_OBJECT)
+    public function execStart(string $id, ExecIdStartPostBody $execStartConfig = null, string $fetch = self::FETCH_OBJECT)
     {
         return $this->executeEndpoint(new ExecStart($id, $execStartConfig), $fetch);
     }
@@ -55,7 +55,7 @@ class Docker extends Client
     /**
      * {@inheritdoc}
      */
-    public function imageBuild($inputStream, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    public function imageBuild($inputStream = null, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
         return $this->executeEndpoint(new ImageBuild($inputStream, $queryParameters, $headerParameters), $fetch);
     }
@@ -63,7 +63,7 @@ class Docker extends Client
     /**
      * {@inheritdoc}
      */
-    public function imageCreate(string $inputImage, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    public function imageCreate(string $inputImage = null, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
         return $this->executeEndpoint(new ImageCreate($inputImage, $queryParameters, $headerParameters), $fetch);
     }
